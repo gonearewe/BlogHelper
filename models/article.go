@@ -42,7 +42,7 @@ func (a *Article) FillTemplate(template string) string {
 	index := strings.Index(tmp, "tags:")
 	tagsString := "\n"
 	for _, tag := range a.tags {
-		tagsString = strings.Join([]string{tagsString, "     ", tag, "\n"}, "")
+		tagsString = strings.Join([]string{tagsString, "     - ", tag, "\n"}, "")
 	}
 	return tmp[:index+5] + tagsString + tmp[index+5:]
 
